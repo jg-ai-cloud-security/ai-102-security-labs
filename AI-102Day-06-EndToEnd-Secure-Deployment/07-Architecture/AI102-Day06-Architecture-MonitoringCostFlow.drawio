@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" version="29.3.7" pages="3">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" version="29.3.7" pages="6">
   <diagram name="AI-102 Day 6  Secure Azure AI Architecture" id="Vd7qkWikQ1CUjYChT3hL">
     <mxGraphModel dx="2036" dy="909" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -67,8 +67,198 @@
       </root>
     </mxGraphModel>
   </diagram>
+  <diagram name="AI-102 Day 7 RAG Flow" id="nmbpET0H-osWSTcwkn1N">
+    <mxGraphModel dx="1958" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-0" />
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-1" parent="3RnJ7_LELtI33Q3YkntF-0" />
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-2" parent="3RnJ7_LELtI33Q3YkntF-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;" value="AI-102 Day 7&amp;nbsp;RAG Flow (Search → Grounding → Answer) Architecture" vertex="1">
+          <mxGeometry height="80" width="160" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-3" edge="1" parent="3RnJ7_LELtI33Q3YkntF-1" source="3RnJ7_LELtI33Q3YkntF-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3RnJ7_LELtI33Q3YkntF-15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-4" parent="3RnJ7_LELtI33Q3YkntF-1" style="rounded=1;whiteSpace=wrap;html=1;" value="User" vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-5" edge="1" parent="3RnJ7_LELtI33Q3YkntF-1" source="3RnJ7_LELtI33Q3YkntF-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3RnJ7_LELtI33Q3YkntF-10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-6" parent="3RnJ7_LELtI33Q3YkntF-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Top Chunks (Context + Metadata)" vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-7" edge="1" parent="3RnJ7_LELtI33Q3YkntF-1" source="3RnJ7_LELtI33Q3YkntF-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="3RnJ7_LELtI33Q3YkntF-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FZ6pZekgAGrfzqmwJUb1-1" edge="1" parent="3RnJ7_LELtI33Q3YkntF-1" source="3RnJ7_LELtI33Q3YkntF-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="FZ6pZekgAGrfzqmwJUb1-0" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-8" parent="3RnJ7_LELtI33Q3YkntF-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Chat Model (Azure OpenAI / Foundry)" vertex="1">
+          <mxGeometry height="70" width="120" x="280" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-9" edge="1" parent="3RnJ7_LELtI33Q3YkntF-1" source="3RnJ7_LELtI33Q3YkntF-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3RnJ7_LELtI33Q3YkntF-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-10" parent="3RnJ7_LELtI33Q3YkntF-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Prompt Builder" vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-11" edge="1" parent="3RnJ7_LELtI33Q3YkntF-1" source="3RnJ7_LELtI33Q3YkntF-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3RnJ7_LELtI33Q3YkntF-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-13" parent="3RnJ7_LELtI33Q3YkntF-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Azure AI Search (Index)" vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-14" edge="1" parent="3RnJ7_LELtI33Q3YkntF-1" source="3RnJ7_LELtI33Q3YkntF-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3RnJ7_LELtI33Q3YkntF-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-15" parent="3RnJ7_LELtI33Q3YkntF-1" style="rounded=1;whiteSpace=wrap;html=1;" value="App / Chat Playground" vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="3RnJ7_LELtI33Q3YkntF-19" parent="3RnJ7_LELtI33Q3YkntF-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;p data-start=&quot;495&quot; data-end=&quot;549&quot;&gt;&lt;strong data-start=&quot;586&quot; data-end=&quot;604&quot;&gt;SOC Visibility&lt;/strong&gt;&lt;br data-start=&quot;604&quot; data-end=&quot;607&quot;&gt;&lt;br/&gt;Logs and alerts for investigations.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="130" x="530" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="FZ6pZekgAGrfzqmwJUb1-0" parent="3RnJ7_LELtI33Q3YkntF-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Answer + Citations" vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="670" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name=" AI-102 Day 7 Security &amp; Identit" id="rGVKzzgscjRij8hYaBcN">
+    <mxGraphModel dx="1205" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="V5rPYN2pHo4n2XVQDRrN-0" />
+        <mxCell id="V5rPYN2pHo4n2XVQDRrN-1" parent="V5rPYN2pHo4n2XVQDRrN-0" />
+        <mxCell id="V5rPYN2pHo4n2XVQDRrN-2" parent="V5rPYN2pHo4n2XVQDRrN-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;" value="AI-102 Day 7&amp;nbsp;Security &amp;amp; Identity (RBAC + Key Vault + Private Access) Architecture" vertex="1">
+          <mxGeometry height="80" width="160" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="V5rPYN2pHo4n2XVQDRrN-3" edge="1" parent="V5rPYN2pHo4n2XVQDRrN-1" source="V5rPYN2pHo4n2XVQDRrN-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="V5rPYN2pHo4n2XVQDRrN-15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="V5rPYN2pHo4n2XVQDRrN-4" parent="V5rPYN2pHo4n2XVQDRrN-1" style="rounded=1;whiteSpace=wrap;html=1;" value="User" vertex="1">
+          <mxGeometry height="60" width="120" x="260" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="V5rPYN2pHo4n2XVQDRrN-9" parent="V5rPYN2pHo4n2XVQDRrN-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Chat Model (Azure OpenAI / Foundry)" vertex="1">
+          <mxGeometry height="70" width="120" x="595" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Zw7gdxbGMnORJ3KVfT44-22" edge="1" parent="V5rPYN2pHo4n2XVQDRrN-1" source="V5rPYN2pHo4n2XVQDRrN-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="V5rPYN2pHo4n2XVQDRrN-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="V5rPYN2pHo4n2XVQDRrN-11" parent="V5rPYN2pHo4n2XVQDRrN-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&#xa;Key Vault (Secrets)&#xa;&#xa;" vertex="1">
+          <mxGeometry height="60" width="110" x="600" as="geometry" />
+        </mxCell>
+        <mxCell id="V5rPYN2pHo4n2XVQDRrN-12" edge="1" parent="V5rPYN2pHo4n2XVQDRrN-1" source="V5rPYN2pHo4n2XVQDRrN-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5rPYN2pHo4n2XVQDRrN-13" parent="V5rPYN2pHo4n2XVQDRrN-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Azure AI Search (Index)" vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="V5rPYN2pHo4n2XVQDRrN-14" edge="1" parent="V5rPYN2pHo4n2XVQDRrN-1" source="V5rPYN2pHo4n2XVQDRrN-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="V5rPYN2pHo4n2XVQDRrN-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zw7gdxbGMnORJ3KVfT44-4" edge="1" parent="V5rPYN2pHo4n2XVQDRrN-1" source="V5rPYN2pHo4n2XVQDRrN-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="V5rPYN2pHo4n2XVQDRrN-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="V5rPYN2pHo4n2XVQDRrN-15" parent="V5rPYN2pHo4n2XVQDRrN-1" style="rounded=1;whiteSpace=wrap;html=1;" value="App / Chat Playground" vertex="1">
+          <mxGeometry height="60" width="120" x="270" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Zw7gdxbGMnORJ3KVfT44-7" edge="1" parent="V5rPYN2pHo4n2XVQDRrN-1" source="Zw7gdxbGMnORJ3KVfT44-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="325" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zw7gdxbGMnORJ3KVfT44-1" parent="V5rPYN2pHo4n2XVQDRrN-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Retrieve chunks" vertex="1">
+          <mxGeometry height="40" width="60" x="420" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Zw7gdxbGMnORJ3KVfT44-5" parent="V5rPYN2pHo4n2XVQDRrN-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&#xa;Chat completions API&#xa;&#xa;" vertex="1">
+          <mxGeometry height="30" width="60" x="440" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Zw7gdxbGMnORJ3KVfT44-11" edge="1" parent="V5rPYN2pHo4n2XVQDRrN-1" source="Zw7gdxbGMnORJ3KVfT44-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Zw7gdxbGMnORJ3KVfT44-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zw7gdxbGMnORJ3KVfT44-8" parent="V5rPYN2pHo4n2XVQDRrN-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&#xa;Blob Storage (Docs)&#xa;&#xa;" vertex="1">
+          <mxGeometry height="60" width="120" x="70" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Zw7gdxbGMnORJ3KVfT44-10" edge="1" parent="V5rPYN2pHo4n2XVQDRrN-1" source="Zw7gdxbGMnORJ3KVfT44-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="V5rPYN2pHo4n2XVQDRrN-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zw7gdxbGMnORJ3KVfT44-9" parent="V5rPYN2pHo4n2XVQDRrN-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Indexer" vertex="1">
+          <mxGeometry height="60" width="120" x="70" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Zw7gdxbGMnORJ3KVfT44-12" parent="V5rPYN2pHo4n2XVQDRrN-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Build/Update Index" vertex="1">
+          <mxGeometry height="30" width="60" x="200" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Zw7gdxbGMnORJ3KVfT44-16" edge="1" parent="V5rPYN2pHo4n2XVQDRrN-1" source="Zw7gdxbGMnORJ3KVfT44-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="280" />
+              <mxPoint x="420" y="280" />
+              <mxPoint x="420" y="260" />
+            </Array>
+            <mxPoint x="410" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zw7gdxbGMnORJ3KVfT44-21" edge="1" parent="V5rPYN2pHo4n2XVQDRrN-1" source="Zw7gdxbGMnORJ3KVfT44-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.069;entryY=0.833;entryDx=0;entryDy=0;entryPerimeter=0;" target="V5rPYN2pHo4n2XVQDRrN-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="655" y="230" />
+              <mxPoint x="408" y="230" />
+            </Array>
+            <mxPoint x="655" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zw7gdxbGMnORJ3KVfT44-14" parent="V5rPYN2pHo4n2XVQDRrN-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&#xa;Managed Identity + RBAC&#xa;&#xa;" vertex="1">
+          <mxGeometry height="65" width="130" x="590" y="310" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="AI-102 Day 7 Monitoring &amp; Cost (Diagnostics → Log Analytics → Alerts + Budget)" id="HPUkYzhlrArqdMqazcPk">
+    <mxGraphModel dx="1205" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="czlWDngnLW4nxNKPwlCj-0" />
+        <mxCell id="czlWDngnLW4nxNKPwlCj-1" parent="czlWDngnLW4nxNKPwlCj-0" />
+        <mxCell id="czlWDngnLW4nxNKPwlCj-2" parent="czlWDngnLW4nxNKPwlCj-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;" value="AI-102 Day 7&amp;nbsp;Monitoring &amp;amp; Cost (Diagnostics → Log Analytics → Alerts + Budget)) Architecture" vertex="1">
+          <mxGeometry height="90" width="180" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="czlWDngnLW4nxNKPwlCj-12" parent="czlWDngnLW4nxNKPwlCj-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&#xa;Azure Monitor Alerts&#xa;&#xa;" vertex="1">
+          <mxGeometry height="60" width="120" x="520" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="gPdE2H38LnZQGQnp1HUs-7" edge="1" parent="czlWDngnLW4nxNKPwlCj-1" source="czlWDngnLW4nxNKPwlCj-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="czlWDngnLW4nxNKPwlCj-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="czlWDngnLW4nxNKPwlCj-19" parent="czlWDngnLW4nxNKPwlCj-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&#xa;Log Analytics Workspace&#xa;&#xa;" vertex="1">
+          <mxGeometry height="60" width="120" x="255" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="gPdE2H38LnZQGQnp1HUs-5" edge="1" parent="czlWDngnLW4nxNKPwlCj-1" source="gPdE2H38LnZQGQnp1HUs-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="315" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gPdE2H38LnZQGQnp1HUs-0" parent="czlWDngnLW4nxNKPwlCj-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Azure AI Search&amp;nbsp;" vertex="1">
+          <mxGeometry height="50" width="120" x="255" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gPdE2H38LnZQGQnp1HUs-6" edge="1" parent="czlWDngnLW4nxNKPwlCj-1" source="gPdE2H38LnZQGQnp1HUs-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="gPdE2H38LnZQGQnp1HUs-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gPdE2H38LnZQGQnp1HUs-1" parent="czlWDngnLW4nxNKPwlCj-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;br&gt;Chat Model (Azure OpenAI / Foundry)" vertex="1">
+          <mxGeometry height="60" width="120" x="470" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gPdE2H38LnZQGQnp1HUs-2" parent="czlWDngnLW4nxNKPwlCj-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&#xa;Diagnostic settings (per resource)&#xa;&#xa;" vertex="1">
+          <mxGeometry height="60" width="120" x="260" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="czlWDngnLW4nxNKPwlCj-23" parent="czlWDngnLW4nxNKPwlCj-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&#xa;Budget → Alerts&#xa;&#xa;" vertex="1">
+          <mxGeometry height="65" width="130" x="560" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="gPdE2H38LnZQGQnp1HUs-8" edge="1" parent="czlWDngnLW4nxNKPwlCj-1" source="czlWDngnLW4nxNKPwlCj-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.697;entryY=0.989;entryDx=0;entryDy=0;entryPerimeter=0;" target="czlWDngnLW4nxNKPwlCj-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
   <diagram name="AI-102 Day 6 — Monitoring &amp; Cost Architecture" id="dnT1l2n0jDMt-iMBKU17">
-    <mxGraphModel dx="1004" dy="1699" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1958" dy="1957" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="oWwXXUiNTJxU2g2tSRf--0" />
         <mxCell id="oWwXXUiNTJxU2g2tSRf--1" parent="oWwXXUiNTJxU2g2tSRf--0" />
