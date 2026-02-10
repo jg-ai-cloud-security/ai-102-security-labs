@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" version="29.3.7" pages="6">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" version="29.3.7" pages="7">
   <diagram name="AI-102 Day 6  Secure Azure AI Architecture" id="Vd7qkWikQ1CUjYChT3hL">
     <mxGraphModel dx="2036" dy="909" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -209,6 +209,97 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Zw7gdxbGMnORJ3KVfT44-14" parent="V5rPYN2pHo4n2XVQDRrN-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&#xa;Managed Identity + RBAC&#xa;&#xa;" vertex="1">
+          <mxGeometry height="65" width="130" x="590" y="310" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Copy of  AI-102 Day 7 Security &amp; Identit" id="rBCV9MJcr8R2pWqHG6La">
+    <mxGraphModel dx="1205" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-0" />
+        <mxCell id="shNNu41brPjS9FCvHMmQ-1" parent="shNNu41brPjS9FCvHMmQ-0" />
+        <mxCell id="shNNu41brPjS9FCvHMmQ-2" parent="shNNu41brPjS9FCvHMmQ-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;" value="AI-102 Day 7&amp;nbsp;Security &amp;amp; Identity (RBAC + Key Vault + Private Access) Architecture" vertex="1">
+          <mxGeometry height="80" width="160" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-3" edge="1" parent="shNNu41brPjS9FCvHMmQ-1" source="shNNu41brPjS9FCvHMmQ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="shNNu41brPjS9FCvHMmQ-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-4" parent="shNNu41brPjS9FCvHMmQ-1" style="rounded=1;whiteSpace=wrap;html=1;" value="User" vertex="1">
+          <mxGeometry height="60" width="120" x="260" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-5" parent="shNNu41brPjS9FCvHMmQ-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Chat Model (Azure OpenAI / Foundry)" vertex="1">
+          <mxGeometry height="70" width="120" x="595" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-6" edge="1" parent="shNNu41brPjS9FCvHMmQ-1" source="shNNu41brPjS9FCvHMmQ-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="shNNu41brPjS9FCvHMmQ-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-7" parent="shNNu41brPjS9FCvHMmQ-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&#xa;Key Vault (Secrets)&#xa;&#xa;" vertex="1">
+          <mxGeometry height="60" width="110" x="600" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-8" edge="1" parent="shNNu41brPjS9FCvHMmQ-1" source="shNNu41brPjS9FCvHMmQ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-9" parent="shNNu41brPjS9FCvHMmQ-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Azure AI Search (Index)" vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-10" edge="1" parent="shNNu41brPjS9FCvHMmQ-1" source="shNNu41brPjS9FCvHMmQ-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="shNNu41brPjS9FCvHMmQ-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-11" edge="1" parent="shNNu41brPjS9FCvHMmQ-1" source="shNNu41brPjS9FCvHMmQ-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="shNNu41brPjS9FCvHMmQ-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-12" parent="shNNu41brPjS9FCvHMmQ-1" style="rounded=1;whiteSpace=wrap;html=1;" value="App / Chat Playground" vertex="1">
+          <mxGeometry height="60" width="120" x="270" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-13" edge="1" parent="shNNu41brPjS9FCvHMmQ-1" source="shNNu41brPjS9FCvHMmQ-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="325" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-14" parent="shNNu41brPjS9FCvHMmQ-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Retrieve chunks" vertex="1">
+          <mxGeometry height="40" width="60" x="420" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-15" parent="shNNu41brPjS9FCvHMmQ-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&#xa;Chat completions API&#xa;&#xa;" vertex="1">
+          <mxGeometry height="30" width="60" x="440" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-16" edge="1" parent="shNNu41brPjS9FCvHMmQ-1" source="shNNu41brPjS9FCvHMmQ-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="shNNu41brPjS9FCvHMmQ-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-17" parent="shNNu41brPjS9FCvHMmQ-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&#xa;Blob Storage (Docs)&#xa;&#xa;" vertex="1">
+          <mxGeometry height="60" width="120" x="70" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-18" edge="1" parent="shNNu41brPjS9FCvHMmQ-1" source="shNNu41brPjS9FCvHMmQ-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="shNNu41brPjS9FCvHMmQ-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-19" parent="shNNu41brPjS9FCvHMmQ-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Indexer" vertex="1">
+          <mxGeometry height="60" width="120" x="70" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-20" parent="shNNu41brPjS9FCvHMmQ-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Build/Update Index" vertex="1">
+          <mxGeometry height="30" width="60" x="200" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-21" edge="1" parent="shNNu41brPjS9FCvHMmQ-1" source="shNNu41brPjS9FCvHMmQ-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="280" />
+              <mxPoint x="420" y="280" />
+              <mxPoint x="420" y="260" />
+            </Array>
+            <mxPoint x="410" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-22" edge="1" parent="shNNu41brPjS9FCvHMmQ-1" source="shNNu41brPjS9FCvHMmQ-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.069;entryY=0.833;entryDx=0;entryDy=0;entryPerimeter=0;" target="shNNu41brPjS9FCvHMmQ-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="655" y="230" />
+              <mxPoint x="408" y="230" />
+            </Array>
+            <mxPoint x="655" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="shNNu41brPjS9FCvHMmQ-23" parent="shNNu41brPjS9FCvHMmQ-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&#xa;Managed Identity + RBAC&#xa;&#xa;" vertex="1">
           <mxGeometry height="65" width="130" x="590" y="310" as="geometry" />
         </mxCell>
       </root>
