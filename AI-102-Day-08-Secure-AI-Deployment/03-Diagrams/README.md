@@ -2,43 +2,43 @@
 
 
 
-This diagram illustrates a secure, production-ready Azure AI deployment designed around Microsoft best-practice controls for networking, identity, monitoring, and cost governance.
+This diagram illustrates a secure, production-ready Azure AI deployment designed around Microsoft best-practice controls for networking, identity, monitoring, and cost governance
 
 
 
-🔍 How the System Works
+
+
+🧩 Architecture Explanation
 
 
 
-Users and Applications connect to the environment from trusted networks.
+Users/apps connect through private networking.
 
 
 
-Traffic enters the Virtual Network, where network isolation is enforced.
+Traffic flows through Private Endpoints.
 
 
 
-Access to the Azure AI service occurs only through a Private Endpoint, removing public internet exposure.
+AI services run in isolated networks.
 
 
 
-The Azure AI Service processes requests securely inside the private network boundary.
+Managed identity controls access.
 
 
 
-Managed Identity and RBAC control who or what can access the service, eliminating the need for stored API keys.
+Logs flow into Log Analytics.
 
 
 
-Diagnostic logs and metrics are streamed into a Log Analytics Workspace.
+Alerts trigger remediation.
 
 
 
-Azure Monitor Alerts analyze this data to detect failures, suspicious activity, or abnormal usage.
+Budgets enforce spend limits.
 
 
-
-A Cost Budget is applied at the resource-group level to prevent unexpected cloud spend.
 
 
 
